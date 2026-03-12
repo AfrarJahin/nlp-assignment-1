@@ -74,7 +74,7 @@ data/
 ### Step 2 — Train and evaluate
 
 ```bash
-python main.py
+python main.py --save_dir
 ```
 
 All outputs are saved to `results/` by default:

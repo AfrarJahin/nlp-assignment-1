@@ -1,0 +1,20 @@
+name: nlpass
+channels:
+  - nvidia
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch=2.5.1
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+  - pip
+  - pip:
+      - sentencepiece      # BPE tokenisation
+      - nltk               # initial word tokenisation
+      - datasets           # HuggingFace datasets (WMT14 download)
+      - sacrebleu          # standard BLEU evaluation
+      - tqdm
+      - numpy
+      - matplotlib
