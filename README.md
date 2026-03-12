@@ -6,20 +6,7 @@ Sequence-to-sequence NMT system with a Bidirectional LSTM encoder, Unidirectiona
 
 ---
 
-## Architecture
 
-| Component | Details |
-|---|---|
-| **Encoder** | Bidirectional LSTM — outputs `h_i^enc = [←h_i; →h_i] ∈ R^{2h}` |
-| **Decoder init** | `h_0^dec = W_h[←h_1^enc; →h_m^enc]`, `c_0^dec = W_c[←c_1^enc; →c_m^enc]` |
-| **Decoder input** | `ȳ_t = [y_t; o_{t-1}] ∈ R^{e+h}` (embedding + previous output) |
-| **Attention** | Multiplicative: `e_{t,i} = (h_t^dec)ᵀ W_attProj h_i^enc` |
-| **Output** | `u_t = [a_t; h_t^dec] → W_u → tanh → dropout → W_vocab → softmax` |
-| **Loss** | Cross-entropy NLL, averaged over batch (eqs 36–38) |
-| **Optimiser** | Adam + global gradient norm clipping τ (eq 39) |
-| **Decoding** | Greedy + Beam search (B=3), score = Σ log p (eq 40) |
-
----
 
 ## Setup
 
