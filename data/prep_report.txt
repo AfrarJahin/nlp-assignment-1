@@ -1,0 +1,5 @@
+Dataset Preparation Report
+==========================
+Number of sentence pairs after filtering: 4,280,958
+Average sentence length (train split): src=22.2 words (27.6 BPE), tgt=23.5 words (26.0 BPE)
+Vocabulary size: src=16,000, tgt=16,000

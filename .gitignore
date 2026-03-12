@@ -17,7 +17,7 @@ Thumbs.db
 # Local experiment outputs
 results/
 nlpass/
-data/
+# data/
 
 # Model/checkpoint artifacts
 *.pt
